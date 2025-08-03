@@ -1,4 +1,4 @@
-namespace WearShop.Models;
+namespace WearShop.Models.Error;
 
 public class ErrorViewModel
 {
