@@ -1,4 +1,5 @@
 using DataAccess;
+using DataAccess.Entities.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,7 +13,7 @@ builder.Services.AddDbContext<WearShopContext>(options => options.UseNpgsql(buil
 //Configuring Database using EntityFrameworkCore
 
 //set up IdentityService, including userRegistration, login, and roles
-builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+builder.Services.AddDefaultIdentity<User>(options =>
         options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<WearShopContext>();
 

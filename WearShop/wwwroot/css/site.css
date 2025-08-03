@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Manrope:wght@200..800&display=swap');
+
 html {
   font-size: 14px;
 }
@@ -19,4 +21,72 @@ html {
 
 body {
   margin-bottom: 60px;
+  font-family: "Comfortaa", sans-serif;
+}
+
+:root{
+  /* невъебическая сакура тема */
+  --sakura-pink:   #FADADD;
+  --pastel-mint:   #B4E9D6;
+  --soft-lavender: #CBB7E2;
+  --cream-white:   #FFF5E4;
+  --charcoal:      #3B3B3B;
+
+  /* Дополнительные */
+  --text-main:     var(--charcoal);
+  --bg-main:       var(--cream-white);
+  --accent:        var(--sakura-pink);
+}
+
+.back-theme{
+  background-color: var(--bg-main);
+  text-align: center;
+}
+.register-container{
+  background-color: var(--accent);
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(194, 138, 178, 0.25);
+}
+
+body, p, a, span, li, div {
+  font-family: "Comfortaa", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+button.btn-primary {
+  background: linear-gradient(45deg, var(--pastel-mint), var(--soft-lavender));
+  border: none;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 1.25rem;
+  transition: background 0.8s ease;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+button.btn-primary:hover {
+  background: var(--pastel-mint);
+}
+
+.form-control {
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: 'Comfortaa', sans-serif;
+  border: 2px solid var(--text-main);
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 5px var(--accent);
+  outline: none;
 }

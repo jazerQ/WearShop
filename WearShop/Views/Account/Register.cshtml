@@ -1,8 +1,26 @@
-@model TModel
-
 @{
     ViewBag.Title = "регистрация (o^ ^o)";
     Layout = "_EmptyLayout";
 }
 
-<h2></h2>
+<main class="container-fluid d-flex justify-content-center align-items-center back-theme vh-100">
+    <div class="register-container w-50">
+        <h1>Регистрация</h1>
+        <div class="mb-3 text-start">
+            <label for="username" class="form-label">Имя пользователя</label>
+            <input type="text" class="form-control" id="username" placeholder="Введите имя" required />
+        </div>
+
+        <div class="mb-3 text-start">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Введите email" required />
+        </div>
+
+        <div class="mb-3 text-start">
+            <label for="password" class="form-label">Пароль</label>
+            <input type="password" class="form-control" id="password" placeholder="Введите пароль" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+    </div>
+</main>
