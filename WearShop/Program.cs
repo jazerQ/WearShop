@@ -14,7 +14,14 @@ builder.Services.AddDbContext<WearShopContext>(options => options.UseNpgsql(buil
 
 //set up IdentityService, including userRegistration, login, and roles
 builder.Services.AddDefaultIdentity<User>(options =>
-        options.SignIn.RequireConfirmedAccount = true)
+    {
+        options.Password.RequireDigit = false;
+        options.Password.RequiredLength = 6;
+        options.Password.RequireNonAlphanumeric = false;
+        options.Password.RequireUppercase = false;
+        options.Password.RequireLowercase = false;
+        options.SignIn.RequireConfirmedAccount = true;
+    })
     .AddEntityFrameworkStores<WearShopContext>();
 
 var app = builder.Build();
