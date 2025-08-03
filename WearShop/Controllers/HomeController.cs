@@ -1,10 +1,12 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using WearShop.Controllers.ExtendedControllers;
 using WearShop.Models;
+using WearShop.Models.Error;
 
 namespace WearShop.Controllers;
 
-public class HomeController : Controller
+public class HomeController : ExtensionController
 {
     private readonly ILogger<HomeController> _logger;
 
