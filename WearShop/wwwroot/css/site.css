@@ -39,11 +39,24 @@ body {
 }
 
 .back-theme{
-  background-color: var(--bg-main);
+  background-image: url(../photos/wallhaven-48zpoy.webp);
   text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
 }
+
+.bg-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* затемнение */
+  z-index: -1;
+}
+
 .register-container{
-  background-color: var(--accent);
+  background-color: var(--bg-main);
   padding: 2.5rem 3rem;
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(194, 138, 178, 0.25);
