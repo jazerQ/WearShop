@@ -39,4 +39,13 @@ public class AccountController(
 
         return Json(QueryResult<string>.Failure(["Не удалось зарегестрироваться"]));
     }
+
+    [HttpGet("[controller]/check")]
+    public IActionResult Check()
+    {
+        return View("ListenCode", new ListenCodeViewModel()
+        {
+            Email = "saltanhayrliev@gmail.com"
+        });
+    }
 }

@@ -90,16 +90,16 @@ button.btn-primary:hover {
 }
 
 .form-control {
-  border-radius: 12px;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  font-family: 'Comfortaa', sans-serif;
   border: 2px solid var(--text-main);
-  transition: border-color 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Comfortaa', sans-serif;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form-control:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 5px var(--accent);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
   outline: none;
 }
