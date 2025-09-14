@@ -2,7 +2,7 @@
     ViewBag.Title = "регистрация (o^ ^o)";
     Layout = "_EmptyLayout";
 }
-<link rel="stylesheet" href="~/css/register.css" asp-append-version="true"/>
+
 <main class="container-fluid d-flex justify-content-center align-items-center back-theme vh-100">
     <div class="register-container w-50">
         <h1>Регистрация</h1>
@@ -42,12 +42,8 @@
            }
            
             $.post("/account/register", model, (res) => {
-              if(res.isSuccess){
-                  window.location.href='/';
-              }
-                else{
-                  alert(res.errors[0]);
-              }  
+                console.log(res)
+                window.location.href = res.redirect;
             });  
        }) 
     });

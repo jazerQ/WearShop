@@ -21,27 +21,24 @@ public class AccountController(
     [HttpPost("/[controller]/register")]
     public async Task<IActionResult> Register(RegisterUserRequest request)
     {
-        var user = new User
-        {
-            UserName = request.Username,
-            Email = request.Email,
-        };
-        
-        //добавляем пользователя
-        var result = await _userManager.CreateAsync(user, request.Password);
+        // var user = new User
+        // {
+        //     UserName = request.Username,
+        //     Email = request.Email,
+        // };
+        //
+        // //добавляем пользователя
+        // var result = await _userManager.CreateAsync(user, request.Password);
 
-        if (result.Succeeded)
-        {
+        // if (result.Succeeded)
+        // {
             // установка куки
-            await _signInManager.SignInAsync(user, false);
-            return Json(QueryResult<string>.Success("все ок"));
-        }
-
-        return Json(QueryResult<string>.Failure(["Не удалось зарегестрироваться"]));
+            //await _signInManager.SignInAsync(user, false);
+            return Json(new { redirect = $"/account/check?number={Guid.NewGuid().ToString()}" });
     }
 
     [HttpGet("[controller]/check")]
-    public IActionResult Check()
+    public IActionResult Check([FromQuery] string number)
     {
         return View("ListenCode", new ListenCodeViewModel()
         {

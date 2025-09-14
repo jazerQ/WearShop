@@ -8,7 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 //setupDatabase
-builder.Services.AddDbContext<WearShopContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("Database"),
+builder.Services.AddDbContext<WearShopContext>(options => options.UseNpgsql(
+    builder.Configuration.GetConnectionString("Database"),
     b => b.MigrationsAssembly(nameof(WearShop))));
 //Configuring Database using EntityFrameworkCore
 
